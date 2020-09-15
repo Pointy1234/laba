@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Интегральное исчисление 1.js</title>
+		<title>Интегральное исчисление.js</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,8 +16,164 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Слайд 1</section>
-				<section>Слайд 2</section>
+				<section data-markdown>
+					<script type="script/template">
+					 Интегральное исчисление
+					 =======================
+					
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="script/template">
+					 Определение первообразной
+					 -------------------------
+					Функция $F(x)$ называется первообразной
+					 для функции $f(x)$ называется первообразной на данном промежутке ,
+					  если для любого $x$ из данного промежутка $F'(x)=f(x)$
+					  
+					 
+					  Интегрирование функции $f(x)$ - 
+					  это математическая операция по нахождению первообразной $f(x)$
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="script/template">
+					 Примеры первообразной
+					 -------------------------
+					
+					</script>
+				</section>
+					<section data-markdown>
+					<script type="script/template">
+					 Свойства первообразной
+					 ---------------------
+					
+					</script>
+				</section>
+					<section data-markdown>
+					<script type="script/template">
+					 Неопределенный Интеграл.Определение
+					 ---------------------
+					
+					</script>
+				</section>
+
+
+				</section>
+					<section id ="integral table">
+					<h2>Таблица интегралов</h2> 		
+					</script>
+				</section>
+			</section>
+			
+			<section data-markdown>
+			<script type="script/template">
+			 Определенный Интеграл.Определение
+			 ---------------------
+			
+			</script>
+		</section>
+
+
+	</section>
+			
+	<section data-markdown>
+	<script type="script/template">
+	 Формула Ньютона-Лейбница
+	 ---------------------
+	
+	</script>
+</section>
+
+			
+</section>
+			
+<section data-markdown>
+<script type="script/template">
+ Способы вычисления интегралов.
+ ---------------------
+
+</script>
+</section>
+</section>
+			
+<section data-markdown>
+<script type="script/template">
+ Примеры вычисления интегралов
+ ---------------------
+
+</script>
+</section>
+
+
+</section>
+<section id ="math.js integral">
+<h2>Вычисление Интегралов</h2> 		
+</script>
+</section>
+
+
+
+</section>
+			
+<section data-markdown>
+<script type="script/template">
+ Интерполирование функции
+ ---------------------
+
+</script>
+</section>
+
+</section>
+			
+<section data-markdown>
+<script type="script/template">
+ Интерполяционные многочлены Лагранжа
+ ---------------------
+
+</script>
+</section>
+
+</section>
+			
+<section data-markdown>
+<script type="script/template">
+ Геометрический смысл определнного интеграла
+ ---------------------
+
+</script>
+</section>
+
+
+</section>
+<section id ="math.js ploshad">
+<h2>Программа на js: площадь между двумя кривыми</h2> 		
+</script>
+</section>
+
+</section>
+<section id ="igra 1">
+<h2>Игра угадай площадь</h2> 		
+</script>
+</section>
+
+
+</section>
+<section id ="igra 2">
+<h2>Найди котиков</h2> 		
+</script>
+</section>
+</section>
+<section id ="igra 2">
+<h2>Найди интегралы</h2> 		
+</script>
+</section>
+
+
+
+
+
 			</div>
 		</div>
 
@@ -31,6 +187,20 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				center: false,
+				slideNumber: true,
+				math:
+				{
+					notificationsEnabled: true,
+				},
+				dependencies:[
+				{
+					src: "plugin/math-katex/math-katex.js",
+					asyns: true,
+					callback: () =>{
+
+					},
+				}],
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
