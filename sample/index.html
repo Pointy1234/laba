@@ -16,7 +16,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown>
+				<section data-markdown data-markdown-separator="^Notes:">
 					<script type="script/template">
 					 Интегральное исчисление
 					 =======================
@@ -24,61 +24,178 @@
 					</script>
 				</section>
 
-				<section data-markdown>
-					<script type="script/template">
-					 Определение первообразной
-					 -------------------------
-					Функция $F(x)$ называется первообразной
-					 для функции $f(x)$ называется первообразной на данном промежутке ,
-					  если для любого $x$ из данного промежутка $F'(x)=f(x)$
-					  
-					 
-					  Интегрирование функции $f(x)$ - 
-					  это математическая операция по нахождению первообразной $f(x)$
-					</script>
-				</section>
-				<section data-markdown>
-					<script type="script/template">
-					 Примеры первообразной
-					 -------------------------
+				<section data-markdown data-markdown-separator="^Notes:">
 					
-					</script>
+						<script type="script/template">
+						 Определение первообразной
+						 -------------------------
+						Функция $F(x)$ называется первообразной
+						 для функции $f(x)$ называется первообразной на данном промежутке ,
+						  если для любого $x$ из данного промежутка $F'(x)=f(x)$
+						  
+						 
+						  Интегрирование функции $f(x)$ - 
+						  это математическая операция по нахождению первообразной $f(x)$
+						</script>
+					</section>
+				
+					<section data-markdown data-markdown-separator="^Notes:">
+						<script type="script/template" >
+							Определение первообразной.Пример
+							-------------------------
+							$F(x)=5x^3$- это первообразная для
+							$f(x) 15x^2$ т.к $F'(x)= (5x^3)'=5 \cdot3x^2 =15x^2$
+							Notes: функция эф от икс называется первообразной для функции эф от икс на на данно промежутке,
+							 если для любого из данного промежутка эф большое от икс равно эф малое от икс
+						</script>
+					</section>
+
+					
+					
+				
 				</section>
-					<section data-markdown>
+					<section data-markdown data-markdown-separator="^Notes:">
 					<script type="script/template">
 					 Свойства первообразной
 					 ---------------------
-					
+					-Если к первообразной $F(x)$ добавить $f(x)$
+				добавить постоянную $C$,то полученная функция $F(x)+C$ также является первообразной для функции
+				$f(x)$
+					-Первообразная  суммы равна сумме первообразных
+				Notes:Заметка
 					</script>
 				</section>
-					<section data-markdown>
+					<section data-markdown data-markdown-separator="^Notes:">
 					<script type="script/template">
 					 Неопределенный Интеграл.Определение
 					 ---------------------
+					Неопределенный интеграл функции $f(x)$
+					называется выражение $F(x)+C$, то есть
+					совокупность всех первообразных функции$f(x)$
+					
+					Обозначается  $\int f(x) dx=F(x) +C$
 					
 					</script>
 				</section>
 
+					<section data-markdown data-markdown-separator="^Notes:">
+					<script type="script/template">
+					 Неопределенный Интеграл.Определение
+					 ---------------------
+					Обозначается  $\int f(x) dx=F(x) +C$, где 
+					- $F(x)$ - подитегральная функция
+					- $f(x)dx$ - подитегральное выражение
+					- $x$ - переменная интегрирования
+					- $F(x)$ - одна из первообращных функции $f(x)$
+					- $C$ - постоянная
 
+					</script>
+				</section>
+				
 				</section>
 					<section id ="integral table">
 					<h2>Таблица интегралов</h2> 		
 					</script>
 				</section>
 			</section>
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Определение
+				 ---------------------
+				1. Разобьем промежуток точками 
+				$x_0=a , x_1, x_2, x_3, \cdots, x_k, x_{k+1}, \cdots, x_n=b$
+				Введем следующее обозначение: $\Delta x_k = x+{k+1}-x_k $ -длина
+				участка разбиения.
+				$\lambda = \sup{ \Delta x_k}$ - диаметр разбиения(наибольший 
+				из всех длин участков разбиения)
+				
+				</script>
+			</section>
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Определение
+				 ---------------------
+				2. На каждом частичном участке $\[x_k; x_{k+1}\]$
+				возьмем произвольную точку $\xi_k$  и вычислим в ней 
+				значение $f(\xi_k)$
+				3.Составим произведение $f(\xi_k) \cdot \Delta x_k$
+				4. Составим сумму $$\sigma_n= \sum_{k=0}^{n-1} f(\xi_k) \cdot \Delta x_k$$
+				</script>
+			</section>
+
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Определение
+				 ---------------------
+				5.Измельчая дробление (За счет увелечения числа точек дробления $n$ и устремляя при этом диаметр  разбиения к нулю 
+				$\lambda \rightarrow 0$), найдем предел последовательности интегральных сумм 
+				$$
+				j= \lim_{n \rightarrow \infty, \lambda \rightarrow 0}\sigma_n
+				$$
+				</script>
+			</section>
+
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Определение
+				 ---------------------
+				Если предeл $J$ существует , не зависит от способа дробления и выбора точек $\xi_k$
+				, то он называется определенный интеграл функции $f(x)$ по промежутку \[a,b\]
+				и Обозначается
+				$$
+				J=\int_a^b f(x)dx
+				$$ где $a$ и $b$ называются нижними и верхними пределами интегрирования.
+
+				</script>
+			</section>
+
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Определение
+				 ---------------------
+				Более компактное определение определенного интеграла  записывается , компактное
+				$$
+				J=\lim_{n \rightarrow \infty, \lambda \rightarrow 0}\sum_{k=0}^{n-1} f(\xi_k) \cdot \Delta x_k
+				$$
+
+				</script>
+			</section>
+
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Свойства
+				 ---------------------
+				- $$
+				\int_a^b Af(x)dx = A\int_a^b f(x)dx
+				$$
+				- $$
+				\int_a^b (f_1(x)+f_2(x))dx = $$ $$\int_a^b f_1(x)dx + \int_a^b f_2(x)dx
+				$$
+				
+
+				</script>
+			</section>
+
+			<section data-markdown data-markdown-separator="^Notes:">
+				<script type="script/template">
+				 Определенный Интеграл.Свойства
+				 ---------------------
+				- $$
+				\int_a^b f(x)dx = \int_a^c f(x)dx + \int_c^b f(x)dx,
+				$$ для любых чисел $a < c < b$
+				
+				
+
+				</script>
+			</section>
+
 			
-			<section data-markdown>
-			<script type="script/template">
-			 Определенный Интеграл.Определение
-			 ---------------------
 			
-			</script>
-		</section>
 
 
 	</section>
 			
-	<section data-markdown>
+	<section data-markdown data-markdown-separator="^Notes:">
 	<script type="script/template">
 	 Формула Ньютона-Лейбница
 	 ---------------------
@@ -89,7 +206,7 @@
 			
 </section>
 			
-<section data-markdown>
+<section data-markdown data-markdown-separator="^Notes:">
 <script type="script/template">
  Способы вычисления интегралов.
  ---------------------
@@ -98,7 +215,7 @@
 </section>
 </section>
 			
-<section data-markdown>
+<section data-markdown data-markdown-separator="^Notes:">
 <script type="script/template">
  Примеры вычисления интегралов
  ---------------------
@@ -117,7 +234,7 @@
 
 </section>
 			
-<section data-markdown>
+<section data-markdown data-markdown-separator="^Notes:">
 <script type="script/template">
  Интерполирование функции
  ---------------------
@@ -127,7 +244,7 @@
 
 </section>
 			
-<section data-markdown>
+<section data-markdown data-markdown-separator="^Notes:">
 <script type="script/template">
  Интерполяционные многочлены Лагранжа
  ---------------------
@@ -137,7 +254,7 @@
 
 </section>
 			
-<section data-markdown>
+<section data-markdown data-markdown-separator="^Notes:">
 <script type="script/template">
  Геометрический смысл определнного интеграла
  ---------------------
