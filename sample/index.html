@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,7 +16,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown data-markdown-separator="^Notes:">
+				<section class="center"data-markdown data-markdown-separator="^Notes:">
 					<script type="script/template">
 					 Интегральное исчисление
 					 =======================
@@ -199,7 +199,22 @@
 	<script type="script/template">
 	 Формула Ньютона-Лейбница
 	 ---------------------
+	Пусть есть непрерыная функция $f(x)$
+	на отрезке $[a,b]$, а $F(X)$ её первообразная, тогда имеем равенство:
+	$$
+	\int_a^bf(x)dx= F(b)-F(a)
+	$$
 	
+	</script>
+</section>
+<section data-markdown data-markdown-separator="^Notes:">
+	<script type="script/template">
+	 Формула Ньютона-Лейбница
+	 ---------------------
+	 $$
+	 \int_1^2x^dx=\dfrac{2^3}{3} - \dfrac{1^3}{3}=
+	 \dfrac{8}{3}-\dfrac{1}{3} = \dfrac{7}{3}
+	 $$
 	</script>
 </section>
 
@@ -210,9 +225,39 @@
 <script type="script/template">
  Способы вычисления интегралов.
  ---------------------
+-Интегрирование элементарных функций (табличных)
+-Интегрирование по частям
+$$
+\int u \cdot dv= uv-\int v\cdot du
+$$
+
+
+ $\int F(x)dx. \text{Пусть}  x=\phi(t),$
+ $\phi(t)$-имеет непрерырывную производную. тогда $dx = \phi(t)'dt$ и 
+ $\int F(x)dx = \int F(\phi(t)) \cdot
+ \phi'(t)dt$
 
 </script>
 </section>
+
+<section data-markdown data-markdown-separator="^Notes:">
+	<script type="script/template">
+	 Способы вычисления интегралов.
+	 ---------------------
+	-Интегрирование элементарных функций (табличных)
+	-Интегрирование по частям
+	$$
+	\int u \cdot dv= uv-\int v\cdot du
+	$$
+	
+	$$
+	 \int F(x)dx. \text{Пусть}  x=\phi(t),
+	 \phi(t)-\text{имеет непрерырывную производную}.
+	$$
+	</script>
+	</section>
+
+
 </section>
 			
 <section data-markdown data-markdown-separator="^Notes:">
@@ -221,24 +266,34 @@
  ---------------------
 
 </script>
-</section>
+
+<section id ="evaluateIntegral">
+<h2>Вычисление Интегралов</h2> 	
+$$\int$$
+<input type="text" id="_function">
+<input type="text" id="_a">
+<input type="text" id="_b">	
 
 
-</section>
-<section id ="math.js integral">
-<h2>Вычисление Интегралов</h2> 		
+<output id="_result">
+
+</output>
 </script>
 </section>
 
 
 
-</section>
+
 			
 <section data-markdown data-markdown-separator="^Notes:">
 <script type="script/template">
  Интерполирование функции
  ---------------------
-
+ Интерполирование - способ нахождения промежуточных значений величины по имеющемуся
+ дискретному набору известных значений.
+ 
+Апроксимация функции - замена одной функции другой, более простой, значение которой приближены или равны
+изначальной.
 </script>
 </section>
 
@@ -249,8 +304,53 @@
  Интерполяционные многочлены Лагранжа
  ---------------------
 
+ $$
+ L(x) = \sum_{i=0}^{n} y_il_i(x), 
+ $$
+ где 
+ $$
+ l_i(x)=\prod_{j=0, j \ne i}^{n}
+ \dfrac{x-x_j}{x_i-x_j}
+ $$
 </script>
 </section>
+
+<section data-markdown data-markdown-separator="^Notes:">
+	<script type="script/template">
+	 Интерполяционные многочлены Лагранжа
+	 ---------------------
+	
+	 $$
+	 l_0=\dfrac{x-x_1}{x_0-x_1} \cdot
+	 \dfrac{x-x_2}{x_0-x_2} \cdot
+	 \dfrac{x-x_3}{x_0-x_3} \cdot
+	 $$
+
+	 $$
+	 l_1=
+	 \dfrac{x-x_0}{x_1-x_1} \cdot
+	 \dfrac{x-x_2}{x_1-x_2} \cdot
+	 \dfrac{x-x_3}{x_1-x_3} \cdot
+	 $$
+
+	 $$
+	 l_2=
+	 \dfrac{x-x_0}{x_2-x_1} \cdot
+	 \dfrac{x-x_1}{x_2-x_2} \cdot
+	 \dfrac{x-x_3}{x_2-x_3} \cdot
+	 $$
+
+	 $$
+	 l_3=
+	 \dfrac{x-x_0}{x_3-x_1} \cdot
+	 \dfrac{x-x_1}{x_3-x_2} \cdot
+	 \dfrac{x-x_2}{x_3-x_3} \cdot
+	 $$
+
+	</script>
+	</section>
+
+
 
 </section>
 			
@@ -258,6 +358,9 @@
 <script type="script/template">
  Геометрический смысл определнного интеграла
  ---------------------
+Геометрический смысл - это площадь кривиолинейной трапеции 
+для неотрицательной и непрерывной функции, которая расположена
+в интервале между двумя прямыми.
 
 </script>
 </section>
@@ -268,22 +371,94 @@
 <h2>Программа на js: площадь между двумя кривыми</h2> 		
 </script>
 </section>
+</section>
+<section id ="math.js ploshad">
+<h2>Нахождение площади криволинейной трапеции</h2> 	
+<label for="function">$f(x)$: </label>	
+<input type="text"  id="function">
+<label for="a">$a$</label>
+<input type="text"  id="function">
+<label for="a">$b$</label>
+<output id="result"></output>
+</script>
+</section>
 
+</section>
 </section>
 <section id ="igra 1">
-<h2>Игра угадай площадь</h2> 		
+<h2>Игра угадай площадь</h2> 	
+<div class="game1"></div>
+<label for="gameInput">Ваш ответ: </label>
+<input type="text"  id="gameInput1">
+<output id="gameOutput1"></output>	
 </script>
 </section>
 
 
 </section>
 <section id ="igra 2">
-<h2>Найди котиков</h2> 		
+<h2>Найди котиков</h2> 	
+<table>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>	
 </script>
 </section>
 </section>
 <section id ="igra 2">
-<h2>Найди интегралы</h2> 		
+<h2>Найди интегралы</h2> 	
+<table>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>		
 </script>
 </section>
 

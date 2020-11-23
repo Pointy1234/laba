@@ -80,7 +80,7 @@
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.0em; }
+  font-size: 3.77em; }
 
 .reveal h2 {
   font-size: 2.11em; }
@@ -282,35 +282,4 @@
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #F0F1EB; } 
-  #_function
-  {
-    position: absolute;
-    top:207px;
-    height:100px;
-    width: 400px;
-    left: 273px;
-  }
-  #_b
-  {
-    position: absolute;
-    top: 321px;
-    width: 50px;
-    left:175px;
-    height: 50px;
-  }
-  #_a
-  {
-    position: absolute;
-    top: 133px;
-    width: 50px;
-    left: 221px;
-    height: 50px;
-  }
-  #evaluateIntegral .formula 
-  {
-    position: absolute;
-    left: 200px;
-    top:200px ;
-  }
-  }
+    background-color: #F0F1EB; } }
